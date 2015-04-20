@@ -1,5 +1,5 @@
 {
-  "name": "openstackci-snmpd",
+  "name": "openstackinfra-snmpd",
   "version": "0.0.1",
   "author": "OpenStack CI",
   "summary": "Puppet module for snmpd",
