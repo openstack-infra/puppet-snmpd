@@ -2,7 +2,7 @@
 #
 class snmpd {
 
-  include snmpd::params
+  include ::snmpd::params
 
   package { 'snmpd':
     ensure => present,
