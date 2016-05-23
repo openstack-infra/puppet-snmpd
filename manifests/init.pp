@@ -11,7 +11,7 @@ class snmpd {
   service { 'snmpd':
     ensure     => running,
     hasrestart => true,
-    require    => File['/etc/snmp/snmpd.conf']
+    subscribe  => File['/etc/snmp/snmpd.conf'],
   }
 
   if ($::osfamily == 'Debian') {
