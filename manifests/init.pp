@@ -8,6 +8,16 @@ class snmpd {
     ensure => present,
     name   => $::snmpd::params::package_name,
   }
+  case $::osfamily {
+    'Debian':
+      file { '/etc/default/snmpd':
+        ensure  => present,
+        owner   => 'root',
+        group   => 'root',
+        mode    => '0444',
+        source  => 'puppet:///modules/ubuntu/default',
+      }
+  }
   service { 'snmpd':
     ensure     => running,
     hasrestart => true,
