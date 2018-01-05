@@ -10,6 +10,7 @@ class snmpd {
   }
   service { 'snmpd':
     ensure     => running,
+    enable     => true,
     hasrestart => true,
     subscribe  => File['/etc/snmp/snmpd.conf'],
   }
