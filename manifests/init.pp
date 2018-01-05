@@ -9,6 +9,7 @@ class snmpd {
     name   => $::snmpd::params::package_name,
   }
   service { 'snmpd':
+    enable     => true,
     ensure     => running,
     hasrestart => true,
     subscribe  => File['/etc/snmp/snmpd.conf'],
