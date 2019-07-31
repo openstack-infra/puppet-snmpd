@@ -1,3 +1,3 @@
-# OpenStack snmpd Module
+# This repo has moved to OpenDev
 
-This module installs and configures snmpd
+It can now be found at [https://opendev.org/opendev/puppet-snmpd](https://opendev.org/opendev/puppet-snmpd)
